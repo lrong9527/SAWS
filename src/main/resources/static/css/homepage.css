@@ -1,0 +1,103 @@
+ body{
+    width: 100%;
+    background:hsl(204, 53%, 86%);
+}
+.header{
+    width:100%; 
+    height:200px; 
+    background:url("../img/topbj.jpg") top center no-repeat;
+    background-size: 160% 100%;
+}
+.container{
+    width:100%; 
+    margin:0 auto; 
+    position:absolute;
+}
+.container_col{ background:#fff; padding:10px;}
+#weather{
+    position:absolute; 
+    left:0; 
+    top:10px; 
+    font-size:12px; 
+    color:#fff; 
+    line-height:24px;
+}
+ .toptxt{
+     position:absolute; 
+     right:  60px;
+     top:10px; 
+     font-size:16px; 
+     color:#fff; 
+     line-height:24px;
+    }
+.toptxt a{
+    font-size:12px;
+    color:#fff; 
+    line-height:24px; 
+    padding:0 10px;
+}
+.toptxt a:hover{
+    color:#FF0;
+}
+.logo{
+    width:336px; 
+    height:112px; 
+    position:absolute; 
+    left:50px; 
+    top:-80px;
+}
+img{
+    width: 650px;
+    height: 500px;
+}
+
+.search{
+    width:274px; 
+    height:30px; 
+    padding:6px 96px 6px 10px; 
+    background:#fff; 
+    position:absolute; 
+    right:50px; top:150px; 
+    border-radius:4px; 
+    overflow:hidden;
+}
+.ipt-sea{
+    height:30px; 
+    width:100%; 
+    border:0; 
+    outline:none; 
+    line-height:30px; 
+    color:#333;
+    font-size:16px;
+}
+.search a{
+    display:block; 
+    width:90px; 
+    height:42px; 
+    background:#044464; 
+    color:#fff; 
+    line-height:42px; 
+    text-align:center; 
+    font-size:17px; 
+    transition:all .3s ease; 
+    position:absolute; right:0; top:0;
+}
+.search a:hover{background:#0594c9;}
+
+.nav{
+    width:1300px; 
+    margin:0 auto;
+    height:60px; 
+    background:#004c73;
+}
+.nav li{width:260px; float:left; height:60px; position:relative;}
+.nav li a{display:block; text-align:center; line-height:60px; font-size:20px; color:#fff; transition:all .3s ease;}
+.nav li a:hover,.nav li.active a{background:#0594c9; color:#FF0;}
+#navul li ul{display:none;position:absolute;z-index:999; left:0; top:60px;}
+#navul li.navmoon{background:#004f7a;}
+#navul li.navmoon a,#navul li.active a{color:#ffba00;}
+#navul li.navhome a:hover{color:#ffba00;}
+#navul li.navmoon ul{display:block;}
+#navul li.navmoon ul li{background:#004f7a; height:40px; line-height:40px; border-top:1px solid #004870;}
+#navul li.navmoon ul a{display:block;height:40px;line-height:40px; font-size:14px;}
+#navul li.navmoon ul a:hover{color:#fff;}

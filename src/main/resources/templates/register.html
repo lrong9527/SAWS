@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="css/register.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>用户注册</h1>
+        <form method="post" action="/register">
+            <input type="text"  placeholder="账号" name="userid" required="required" oninvalid="setCustomValidity('账号不能为空')" >
+            <input type="password"  placeholder="输入密码" name="user_pw" id="pw1" required="required" oninvalid="setCustomValidity('密码不能为空')" >
+            <input type="password" placeholder="再次输入密码" name="re_pw" id="pw2" required="required" oninvalid="setCustomValidity('密码不能为空')" onkeyup="pw_validate()">
+            <span id="tishi"></span>
+            <input type="text" placeholder="真实姓名" name="user_name" required="required" oninvalid="setCustomValidity('不能为空')">
+            <input type="number" placeholder="手机号" name="user_phone" required="required" oninvalid="setCustomValidity('不能为空')">
+            <input type="text" placeholder="地址" name="user_address" required="required" oninvalid="setCustomValidity('不能为空')">
+            <input type="number" placeholder="年龄" name="user_age" required="required" oninvalid="setCustomValidity('不能为空')">
+            <div class="gender-choose">
+                性别：
+                女 <input type="radio" name="user_sex" value="1" class="girl">
+                男 <input type="radio" name="user_sex" value="2" class="man">
+            </div>
+            <div class="but">
+                <button class="sub" type="submit" name="submit" >注册</button>
+                <button class="sub" onclick="window.location.href='/'">返回</button>
+            </div>
+             
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    
+    // function re_succ(){
+    //     $.ajax({
+    //         type: "post",
+    //         url : getContextPath()+"/register",
+    //         dataType: 'json',
+    //         data:{"res":res},
+    //         success: function(data){
+    //             if(data.res){
+    //                 alert("注册成功！");
+    //              }else{
+    //                 alert("账号已存在！");
+    //
+    //              }
+    //
+    //         }
+    //     }
+    //
+    //     )
+    //
+    // }
+
+    function pw_validate(){
+        var pw1=document.getElementById("pw1").value;
+        var pw2=document.getElementById("pw2").value;
+        if(pw1!=pw2){
+            document.getElementById("tishi").innerHTML="<font color='red'>两次密码不一致!</font>";
+        }else
+            document.getElementById("tishi").innerHTML="<font color='green'>密码输入正确!</font>";
+
+    }
+</script>
+</html>
