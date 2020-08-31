@@ -51,8 +51,14 @@ public class Register {
 
         Boolean res = userDao.register(user);
 
-        if(res) return "register_T";
-        else return "register_F";
+        if(res){
+            System.out.println("注册成功");
+            return "register_T";
+        }
+        else {
+            System.out.println("注册失败");
+            return "register_F";
+        }
     }
 
     //返回get请求
