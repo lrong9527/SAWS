@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    @Select(" select * from user where user_id = #{user_id} ")
+    @Select("select * from user where user_id = #{user_id} ")
     public User getUser_ByID(String id);
 
     @Insert(" insert into user(user_id,user_password,user_name,user_phone,user_address,user_age,user_gender)" +
@@ -17,5 +17,8 @@ public interface UserMapper {
 
     @Select(" select * from user")
     public List<User>  List();
+
+    @Select("select user_password from user where user_id = #{user_id}")
+    String getPassword(String id);
 }
 

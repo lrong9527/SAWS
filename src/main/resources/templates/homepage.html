@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +15,22 @@
     <div class="header">
         <div class="container">
             <div id="weather"></div>
-            <div class="toptxt">
-                <a href="/user_login">登陆</a> | <a href="/register">注册</a>
+            <div class="toptxt" id="username">
+                <div th:if="not ${logged}">
+                    <a href="/authenticate">登陆</a> | <a href="/register">注册</a>
+
+                </div>
+                <div th:if="${logged}">
+                    <span th:text="${username}"></span>
+                    <span th:text="${type}"></span>
+                    <button onclick="location.href='/logout'">退出登录</button>
+                </div>
+
             </div>
+            <script>
+                if(getCookie("username") != null)
+                    document.getElementById("username").innerHTML = getCookie("username");
+            </script>
             <div class="search">
                 <input type="text" class="ipt-sea" placeholder="请输入关键词">
                 <a href="javascript:;"> 搜索</a>

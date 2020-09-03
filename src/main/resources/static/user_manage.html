@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/adminpage.css">
+</head>
+<body>
+
+
+    <div class="heading">
+        <!--页眉内容-->
+        <div class="heading_nav">
+            <!--这里是导航栏内容-->
+            <div class="heading_logo"><img src="/img/logo.png" height="100px" width="100px" /></div>
+            <div class="sys_name">安监总局后台管理系统</div>
+            <!-- <div class="welcome"> -->
+           
+                    
+                    <ul class="nav_list">
+                        <li class="active">
+                            <a href="reader_books.html ">
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reader_info.html" >
+                                权限管理
+                            </a>
+                        </li>
+                        <li >
+                            <a href="mylend.html" >
+                                组织机构
+                            </a>
+                        </li>
+                        <li >xxx，已登录</li>
+                        <li><a href="#">登出</a> </li>
+                        
+                    </ul>
+              
+        </div>
+    </div>
+    <div style="padding: 20px 550px 10px">
+        <form method="post"  class="form-inline" id="searchform">
+            <div class="input-group">
+                <input type="text" placeholder="输入用户" class="form-control" id="search" name="searchWord"
+                       class="form-control">
+                <span class="input-group-btn">
+                    <input type="submit" value="搜索" class="btn btn-default">
+                </span>
+            </div>
+        </form>
+        <script>
+            $("#searchform").submit(function () {
+                var val = $("#search").val();
+                if (val == '') {
+                    alert("请输入关键字");
+                    return false;
+                }
+            })
+        </script>
+    </div>
+
+    <div class="body">
+        <table id="myTable">
+            
+                <tr class="header">
+                    <th>账号</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>权限等级</th>
+                    <th id="state">状态</th>
+                    <th>操作</th>
+                   
+                </tr>
+            
+         <tbody>
+            
+                 <tr>
+                       <td>zhang</td>
+                       <td>张</td>
+                       <td>性别</td>
+                       <td>权限等级</td>
+                       <td>激活</td>
+        
+                    <td><a href="reserve.htm?BOOKID=${book.getID()}&BOOKAVANUM=${book.getAvaNum()}">
+                        <button type="button" id="btn">冻结</button>
+                        </a>
+                    </td>
+                    
+               </tr>     
+             
+                
+           </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>

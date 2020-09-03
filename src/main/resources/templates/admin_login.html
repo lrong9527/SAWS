@@ -15,7 +15,7 @@
 		    height: 100%;   
 		    font-family: 'Open Sans',sans-serif;   
 		    margin: 0;   
-		    background:url(pic/ad2.jpg)  repeat left top;
+		    background:url(img/ad2.jpg)  repeat left top;
 			background-size: cover;
 		}   
 		#login{   
@@ -112,32 +112,18 @@
 			box-shadow: 0px 0px 5px 1px #FF0000;
 		}
 	</style>
-	<script>
-			function change() {
-			window.location.href = "../login/user.html";
-		}
-		/*在提交表单之前 该事件先发生，检查account 是否输入 ‘/admin’ 密令，如果是则跳转，如果不是，则提交表单，又因为input存在
-		required属性，所有password不准为空*/
-			function checkAdmin(){
-				var com= document.getElementById("adminName").value;
-				if (com=="/admin"){
-					window.location.href="../../admin/Admin/Admin_login.html";
-				}
-			}
-	</script>
 	</head>
 	<body>
 	<div id="change">
-			<button id="login_btn" type="button" style="cursor: pointer;" onclick="change()">User login</button>
+			<button id="login_btn" type="button" style="cursor: pointer;" onclick="location.href='authenticate'">User login</button>
 		</div>
 		 <div id="login">  
 		        <h1>Administrator Login</h1>  
-		        <form method="post" >  
-		
-		            <input type="text" id="adminName" placeholder="Account" name="name" required="required" oninvalid="setCustomValidity('it can not be empty')" oninput="setCustomValidity('')"></input>  
-		            <input type="password"  placeholder="Password" name="pw" required="required" oninvalid="setCustomValidity('it can not be empty')" oninput="setCustomValidity('')"></input>  
+		        <form method="post" action="/adminAuthenticate">
+					<label for="adminName"></label><input type="text" id="adminName" placeholder="Account" name="name" required/>
+					<label for="password"></label><input id="password" type="password" placeholder="Password" name="pw" required/>
 					<button class="but" type="submit" name="submit" onclick="checkAdmin()">Sign-In</button>  
-					<a  href="../../admin/Admin/forget_pass.html" type="submit" name="forget ps">forget password</a>  
+					<a  href="forget_pass.html" type="submit">forget password</a>
 		        </form>  
 		 </div>  
 	</body>

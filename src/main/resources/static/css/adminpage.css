@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+}
+
+
+
+body {
+    background-color: white;
+    padding: 0px;
+}
+
+.heading {
+    background-color: #434172;
+    width: 100%;
+    height: 117px;
+    margin: 0px auto;
+}
+
+.heading_nav {
+    width: 100%;
+    height: 30px;
+}
+
+.heading_logo {
+    margin-left: 19px;
+    margin-top: 12px;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.sys_name {
+    margin-left: 120px;
+    width: 500px;
+    height: 117px;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 117px;
+    color: #FFFFFF;
+}
+
+.nav_list{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin-top: -20px;
+    color: #ffffff;
+}
+li{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+.heading_font {
+    margin-top: 12px;
+    font-size: 24px;
+}
+
+a:link,
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: #b7acad;
+    text-align: center;
+}
+li.active a{
+    color: #b7acad;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+.body {
+    background-color: white;
+    width: 75%;
+    height: 100%;
+    margin: 30px auto;
+    border-style: groove;
+    border-width: 0px;
+    border-color: #fff9ea;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+nav .level>li {
+    float: right;
+    width: 16.66%;
+    text-align: center;
+    padding-top: -50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    font-size: 20px;
+    margin-top: -25px;
+}
+
+nav .level>li a {
+    color: white;
+}
+
+nav .level>li:hover {
+    background: #434172;
+}
+
+.footing {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    height: 50px;
+    width: 80%;
+    border-top-color: #ebeef0;
+    border-top-style: groove;
+    border-top-width: 1px;
+}
+
+.foot_font {
+    padding-bottom: 50px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
