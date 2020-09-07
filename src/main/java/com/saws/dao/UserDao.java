@@ -20,4 +20,8 @@ public class UserDao {
     public boolean authenticate(String id, String pw){
         return userMapper.getPassword(id).equals(pw);
     }
+
+    public boolean changeInfo(User user){
+        return userMapper.changeInfo(user) == 1;
+    }
 }
